@@ -26,9 +26,10 @@
 
         }
         if(strcasecmp($operacao,"!") == 0){
+            
         
             $val =  Fatoração($num1,$num2);
-            return "{$num1} {$operacao} {$num2} = {$val}";
+            return "{$num1} {$operacao} = {$val}";
 
         }
         if(strcasecmp($operacao,"^") == 0){
@@ -64,9 +65,16 @@
 
     }
     
-    function Fatoração($x,$y){
+    function Fatoração($num1,$num2){
 
-
+        $resultado = 1;
+        $num2 = 0;
+        while ($num1 != 1)
+        {
+            $resultado = $resultado * $num1;
+            $num1 = $num1 - 1;
+        }
+        return $resultado;
         
     }
     

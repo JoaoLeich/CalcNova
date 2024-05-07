@@ -25,9 +25,42 @@
     <label for="Numero2">Numero: </label>
     <input type="number" name="Numero2" id="Numero2">
 
-    <input type="submit" value="">
+    <input type="submit" value="Calcular">
 
 </form>
+
+<?php 
+
+    require_once 'Operacao.php';
+    require_once 'SalvarHistorico.php';
+    require_once 'Funcoes.php';
+    
+    $val1 = isset($_GET['Numero1']) ? $_GET['Numero1'] : null;
+
+    $val2 = isset($_GET['Numero2']) ? $_GET['Numero2'] : null;
+    
+    $oper = isset($_GET['Operacao']) ? $_GET['Operacao'] : null;
+     
+    $frase = Oper($oper,$val1,$val2); 
+
+    echo "</br>".$frase."</br>";
+
+    $arr = SaveHistory($frase);    
+
+?>
+
+</br>
+
+<ul>
+
+<?php
+
+
+ShowArrayDescOrder($arr);
+
+?>
+
+</ul>
 
 <body>
 
@@ -36,14 +69,3 @@
 </html>
 
 
-<?php 
-
-    require_once 'Operacao.php';
-    
-    $val1 = $_GET['Numero1'];    
-    
-    $val2 = $_GET['Numero2'];
-
-    echo Oper($_GET['Operacao'],$val1,$val2); 
-
-?>
