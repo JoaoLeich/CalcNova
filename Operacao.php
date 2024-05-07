@@ -41,6 +41,46 @@
         
     }
 
+    function ValueOper($operacao,$num1,$num2){
+
+        if(strcasecmp($operacao,"+") == 0){
+
+            $val =  Soma($num1,$num2);
+            return $val;
+
+        }
+        else if(strcasecmp($operacao,"-") == 0){
+            
+            $val =  Subtracao($num1,$num2);
+            return $val;
+
+        }
+        if(strcasecmp($operacao,"*") == 0){
+         
+            $val =  Multiplicacao($num1,$num2);
+            return $val;
+        }
+        if(strcasecmp($operacao,"/") == 0){
+        
+            $val =  Divisao($num1,$num2);
+            return $val;
+        }
+        if(strcasecmp($operacao,"!") == 0){
+            
+        
+            $val =  Fatoração($num1,$num2);
+            return $val;
+
+        }
+        if(strcasecmp($operacao,"^") == 0){
+
+            $val =  Potenciação($num1,$num2);
+            return $val;
+
+        }
+        
+    }
+
     function Soma($x,$y){
 
         return $x + $y;
