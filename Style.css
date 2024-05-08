@@ -1,0 +1,47 @@
+#all{
+
+    background-color: gray;
+
+}
+
+
+
+    #parent {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+
+
+
+#Numero1{
+
+    border-radius: 50px;
+
+}
+
+#Numero2{
+
+    border-radius: 50px;
+
+}
+
+#historico{
+
+background-color: white;
+width: 35%;
+text-align: center;
+list-style-type: none;
+
+margin-left: 26vw;
+border: 10px solid #000000;
+
+}
+
+#Frase{
+
+    font-size: 19px;
+
+}

@@ -6,7 +6,7 @@
 
         for ($i = count($arr) - 1; $i >= 0 ; $i--) { 
             
-            echo "<li>".$arr[$i]."</li>";
+            echo "<li style=\"text-align: center;\">".$arr[$i]."</li>";
         }
     }
         return;
